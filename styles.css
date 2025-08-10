@@ -1,0 +1,137 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.app-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 360px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+#taskInput::placeholder {
+  color: #ddd;
+  font-weight: 400;
+}
+
+#taskInput:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#addTaskBtn {
+  background: #5a67d8;
+  border: none;
+  padding: 0 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+#addTaskBtn:hover {
+  background: #434190;
+}
+
+#taskList {
+  list-style: none;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a3a3f7 transparent;
+}
+
+#taskList::-webkit-scrollbar {
+  width: 6px;
+}
+
+#taskList::-webkit-scrollbar-thumb {
+  background-color: #a3a3f7;
+  border-radius: 10px;
+}
+
+#taskList li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+#taskList li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  color: #bbb;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+button.delete-btn {
+  background: #e53e3e;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+button.delete-btn:hover {
+  background: #9b2c2c;
+}
